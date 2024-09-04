@@ -41,6 +41,7 @@ public class CacheConfiguration {
             createCache(cm, bj.highfiveuniversity.repository.UserRepository.USERS_BY_LOGIN_CACHE);
             createCache(cm, bj.highfiveuniversity.repository.UserRepository.USERS_BY_EMAIL_CACHE);
             createCache(cm, bj.highfiveuniversity.domain.Authority.class.getName());
+            createCache(cm, bj.highfiveuniversity.domain.Album.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

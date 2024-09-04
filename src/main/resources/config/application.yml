@@ -91,6 +91,11 @@ management:
       application: ${spring.application.name}
 
 spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/appMusicFull
+    username: user
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: appMusicFull
   profiles:

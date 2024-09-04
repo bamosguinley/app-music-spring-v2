@@ -6,10 +6,11 @@ services:
     volumes:
       - ./config/mysql:/etc/mysql/conf.d
     environment:
-      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
-      - MYSQL_DATABASE=appmusicfull
-    # If you want to expose these ports outside your dev PC,
-    # remove the "127.0.0.1:" prefix
+      - MYSQL_ROOT_PASSWORD=root_password
+      - MYSQL_DATABASE=appMusicFull
+      - MYSQL_USER=app_user
+      - MYSQL_PASSWORD=app_password
+
     ports:
       - 127.0.0.1:3306:3306
     command: mysqld --lower_case_table_names=1 --skip-mysqlx --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
